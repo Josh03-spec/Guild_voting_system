@@ -1,0 +1,204 @@
+:root {
+	color-scheme: light;
+
+	/* Typography */
+	--font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+	--font-serif: Georgia, "Times New Roman", Times, serif;
+
+	/* Spacing and radius */
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 20px;
+	--space-6: 24px;
+	--space-8: 32px;
+	--space-10: 40px;
+	--radius-sm: 8px;
+	--radius-md: 12px;
+	--radius-lg: 16px;
+	--radius-xl: 20px;
+
+	/* Light theme surfaces */
+	--bg-page: #f7f9fc;
+	--bg-surface: #ffffff;
+	--bg-surface-2: #f1f5f9;
+	--bg-surface-3: #eaf0f7;
+	--bg-overlay: rgba(15, 23, 42, 0.55);
+
+	/* Text */
+	--text-primary: #0f172a;
+	--text-secondary: #64748b;
+	--text-muted: #94a3b8;
+	--text-inverse: #ffffff;
+
+	/* Borders and shadows */
+	--border-subtle: #d7dee8;
+	--border-strong: #b8c3d3;
+	--shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+	--shadow-md: 0 10px 30px rgba(15, 23, 42, 0.10);
+	--shadow-lg: 0 18px 45px rgba(15, 23, 42, 0.14);
+
+	/* Brand and semantic colors */
+	--accent: #c7770f;
+	--accent-hover: #a9640b;
+	--accent-soft: rgba(199, 119, 15, 0.12);
+	--success: #15803d;
+	--success-soft: rgba(21, 128, 61, 0.12);
+	--warning: #b45309;
+	--warning-soft: rgba(180, 83, 9, 0.12);
+	--danger: #dc2626;
+	--danger-soft: rgba(220, 38, 38, 0.12);
+	--info: #2563eb;
+	--info-soft: rgba(37, 99, 235, 0.12);
+
+	/* Interaction */
+	--focus-ring: 0 0 0 3px rgba(199, 119, 15, 0.22);
+	--transition-fast: 120ms ease;
+	--transition-base: 180ms ease;
+	--transition-slow: 260ms ease;
+
+	/* Component aliases */
+	--page-background: var(--bg-page);
+	--surface: var(--bg-surface);
+	--surface-elevated: var(--bg-surface-2);
+	--surface-raised: var(--bg-surface-3);
+	--card-background: var(--bg-surface);
+	--card-border: var(--border-subtle);
+	--header-background: var(--bg-surface);
+	--input-background: var(--bg-surface);
+	--input-border: var(--border-subtle);
+	--input-text: var(--text-primary);
+	--input-placeholder: var(--text-muted);
+	--button-primary-bg: var(--accent);
+	--button-primary-text: var(--text-inverse);
+	--button-primary-hover: var(--accent-hover);
+	--button-secondary-bg: var(--bg-surface-2);
+	--button-secondary-text: var(--text-primary);
+	--button-secondary-border: var(--border-subtle);
+	--table-header-bg: var(--bg-surface-2);
+	--table-row-hover: var(--bg-surface-2);
+	--modal-backdrop: var(--bg-overlay);
+}
+
+[data-theme="dark"] {
+	color-scheme: dark;
+
+	/* Dark theme surfaces */
+	--bg-page: #0f172a;
+	--bg-surface: #111827;
+	--bg-surface-2: #1f2937;
+	--bg-surface-3: #273244;
+	--bg-overlay: rgba(2, 6, 23, 0.72);
+
+	/* Text */
+	--text-primary: #e5eefb;
+	--text-secondary: #94a3b8;
+	--text-muted: #64748b;
+	--text-inverse: #0f172a;
+
+	/* Borders and shadows */
+	--border-subtle: #334155;
+	--border-strong: #475569;
+	--shadow-sm: 0 1px 2px rgba(2, 6, 23, 0.35);
+	--shadow-md: 0 10px 30px rgba(2, 6, 23, 0.45);
+	--shadow-lg: 0 18px 45px rgba(2, 6, 23, 0.55);
+
+	/* Brand and semantic colors */
+	--accent: #d6a23d;
+	--accent-hover: #e2b85f;
+	--accent-soft: rgba(214, 162, 61, 0.14);
+	--success: #22c55e;
+	--success-soft: rgba(34, 197, 94, 0.12);
+	--warning: #f59e0b;
+	--warning-soft: rgba(245, 158, 11, 0.12);
+	--danger: #f87171;
+	--danger-soft: rgba(248, 113, 113, 0.12);
+	--info: #60a5fa;
+	--info-soft: rgba(96, 165, 250, 0.12);
+
+	/* Component aliases */
+	--page-background: var(--bg-page);
+	--surface: var(--bg-surface);
+	--surface-elevated: var(--bg-surface-2);
+	--surface-raised: var(--bg-surface-3);
+	--card-background: var(--bg-surface);
+	--card-border: var(--border-subtle);
+	--header-background: var(--bg-surface);
+	--input-background: var(--bg-surface);
+	--input-border: var(--border-subtle);
+	--input-text: var(--text-primary);
+	--input-placeholder: var(--text-muted);
+	--button-primary-bg: var(--accent);
+	--button-primary-text: var(--text-inverse);
+	--button-primary-hover: var(--accent-hover);
+	--button-secondary-bg: var(--bg-surface-2);
+	--button-secondary-text: var(--text-primary);
+	--button-secondary-border: var(--border-subtle);
+	--table-header-bg: var(--bg-surface-2);
+	--table-row-hover: var(--bg-surface-2);
+	--modal-backdrop: var(--bg-overlay);
+}
+
+html {
+	background: var(--page-background);
+}
+
+body {
+	background: var(--page-background);
+	color: var(--text-primary);
+	font-family: var(--font-sans);
+	transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+img,
+svg,
+video,
+canvas {
+	max-width: 100%;
+	display: block;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+	outline: none;
+	box-shadow: var(--focus-ring);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-2);
+	padding: var(--space-2) var(--space-4);
+	background: transparent;
+	border: 1px solid var(--border-subtle);
+	border-radius: var(--radius-md);
+	color: var(--text-secondary);
+	font-family: var(--font-sans);
+	font-size: 0.875rem;
+	cursor: pointer;
+	transition: border-color var(--transition-base), color var(--transition-base), background-color var(--transition-base);
+	white-space: nowrap;
+}
+
+.theme-toggle-btn:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+	background-color: var(--accent-soft);
+}
+
+.theme-toggle-btn:active {
+	border-color: var(--accent-hover);
+	color: var(--accent-hover);
+}
