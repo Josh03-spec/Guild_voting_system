@@ -442,7 +442,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="brand-panel">
 
         <div class="brand-logo">
-            <div class="logo-icon">&#128717;</div>
             <div class="logo-text">Poll<span>Point</span></div>
         </div>
 
